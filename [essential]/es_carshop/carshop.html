@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+		<script src="js/jquery.js" type="text/javascript"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+	<img id="cursor" src="cursor.webp" style="position: absolute; display:none; z-index: 99;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style='z-index: 1'>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <b class="navbar-brand">Press ESC to close.</b>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" style='' id='select-cat-home'>Home</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+					<div class="col-md-3">
+							<p class="lead">Categories</p>
+							<div class="list-group">
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-job'>Job Vehicles</a>
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-muscle'>Muscle Cars</a>
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-sports'>Sports Cars</a>
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-compact'>Compact Cars</a>
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-offroad'>Offroad Vehicles</a>
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-sportsclassic'>Sports Classic Cars</a>
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-suv'>SUV Cars</a>
+									<a href="#" style="border-radius: 0;" class="list-group-item" id='select-cat-super'>Super Cars</a>
+							</div>
+					</div>
+
+            <div class="col-md-8">
+
+                <div id="home" class="row carousel-holder">
+
+                    <div class="col-md-12">
+											<div class="jumbotron">
+												<h2><b>First-Class Cars</b></h2>
+												<p>Welcome to your garage! Here you can purschase vehicles and spawn the ones you already own. Select a catery to begin!</p>
+											</div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+									<div id="job-vehicles">
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_mule">
+                        <div class="thumbnail">
+                            <img src="cars/mule.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£2,000</h4>
+                                <h4><b>Mule</b>
+                                </h4>
+                                <p>The mule, a truckers dream. Also required for trucking jobs.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">9 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_police">
+                        <div class="thumbnail">
+                            <img src="cars/police.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£2,000</h4>
+                                <h4><b>Police Car</b>
+                                </h4>
+                                <p>Police cruiser, be a basterd and arrest people.<br><br><b>Note: </b>Can only be used by cops.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">9 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+									</div>
+
+									<div id="muscle-cars">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_dominator">
+                        <div class="thumbnail">
+                            <img src="cars/dominator.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£50,000</h4>
+                                <h4><b>Dominator</b>
+                                </h4>
+                                <p>The amazing dominator, stylish and fast, what more do you want?</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_gauntlet">
+                        <div class="thumbnail">
+                            <img src="cars/gauntlet.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£55,000</h4>
+                                <h4><b>Gauntlet</b>
+                                </h4>
+                                <p>A slightly better looking dominator, same speed.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">23 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_voodoo2">
+                        <div class="thumbnail">
+                            <img src="cars/voodoo.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£15,000</h4>
+                                <h4><b>Voodoo</b>
+                                </h4>
+                                <p>The Voodoo, a neat little peace of machinery.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">1 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+									</div>
+
+									<div id="compact-cars">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_prairie">
+                        <div class="thumbnail">
+                            <img src="cars/prairie.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£15,000</h4>
+                                <h4><b>Prairie</b>
+                                </h4>
+                                <p>A compact car, not much to expect.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">3 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+									</div>
+
+									<div id="suv-cars">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_baller3">
+                        <div class="thumbnail">
+                            <img src="cars/baller3.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£120,000</h4>
+                                <h4><b>Baller</b>
+                                </h4>
+                                <p>Nothing says Hip Hop like a British SUV known primarily for its ability to transport mineral rich colonialists across invaded lands.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">18 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+									</div>
+
+									<div id="super-cars">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_adder">
+                        <div class="thumbnail">
+                            <img src="cars/adder.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£8,000,000</h4>
+                                <h4><b>Adder</b>
+                                </h4>
+                                <p>The adder, here since the start.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">8 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_fmj">
+                        <div class="thumbnail">
+                            <img src="cars/fmj.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£10,000,000</h4>
+                                <h4><b>FMJ</b>
+                                </h4>
+                                <p>As the rate of infant heart disease suggests, the power to weight ratio has never been America's strong suit - until now. With the FMJ, Vapid put the American supercar on a raw food diet and gave it colonic irrigation. The result? With the same primal engine under bodywork that's 90% carbon fiber and 10% patriotic sentiment, this thing will go 0 to 60 on the back of nothing more than a light sneeze.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">5 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+									</div>
+
+									<div id="sportsclassic-cars">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_tornado2">
+                        <div class="thumbnail">
+                            <img src="cars/tornado2.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£16,000</h4>
+                                <h4><b>Tornado</b>
+                                </h4>
+                                <p>Rusty and Slow</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">3 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_ztype">
+                        <div class="thumbnail">
+                            <img src="cars/ztype.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£6,000,000</h4>
+                                <h4><b>Z-Type</b>
+                                </h4>
+                                <p>A classic variant of the bugatti. Really rare,</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">1 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+									</div>
+
+									<div id="sedan-cars">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_cognoscenti">
+                        <div class="thumbnail">
+                            <img src="cars/cognoscenti.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£200,000</h4>
+                                <h4><b>Cognoscenti</b>
+                                </h4>
+                                <p>A luxury sedan, great for the family. Or a heist...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">203 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_emperor">
+                        <div class="thumbnail">
+                            <img src="cars/emperor.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£18,000</h4>
+                                <h4><b>Emperor</b>
+                                </h4>
+                                <p>Could be better.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">24 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_ingot">
+                        <div class="thumbnail">
+                            <img src="cars/ingot.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£19,000</h4>
+                                <h4><b>Ingot</b>
+                                </h4>
+                                <p>Could be way better. Quite ugly</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">16 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+									</div>
+
+									<div id="offroad-cars">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_bfinjection">
+                        <div class="thumbnail">
+                            <img src="cars/bfinjection.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£25,000</h4>
+                                <h4><b>BF Injection</b>
+                                </h4>
+                                <p>Dirty car, but not too bad for offroad.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">18 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_rancherxl">
+                        <div class="thumbnail">
+                            <img src="cars/rancherxl.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£20,000</h4>
+                                <h4><b>Rancher XL</b>
+                                </h4>
+                                <p>Little less durable then the BF Injection.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">19 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_rebel">
+                        <div class="thumbnail">
+                            <img src="cars/rebel.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£25,000</h4>
+                                <h4><b>Rebel</b>
+                                </h4>
+                                <p>Little faster then the BF Injection but it's scratched.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">19 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+									</div>
+
+									<div id="sports-cars">
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_ninef">
+                        <div class="thumbnail">
+                            <img src="cars/ninef.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£250,000</h4>
+                                <h4><b>Obey 9F</b>
+                                </h4>
+                                <p>Good looking car and fast aswell!</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">118 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_ninef2">
+                        <div class="thumbnail">
+                            <img src="cars/ninef2.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£300,000</h4>
+                                <h4><b>Obey 9F Cabrio</b>
+                                </h4>
+                                <p>Same as the Obey 9F but awesomer.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">215 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+										<!-- SPLIT -->
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_alpha">
+                        <div class="thumbnail">
+                            <img src="cars/alpha.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£500,000</h4>
+                                <h4><b>Alpha</b>
+                                </h4>
+                                <p>Cool car that's quite fast</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">214 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_banshee">
+                        <div class="thumbnail">
+                            <img src="cars/banshee.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£300,000</h4>
+                                <h4><b>Banshee</b>
+                                </h4>
+                                <p>Fast sports car</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">92 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_blista2">
+                        <div class="thumbnail">
+                            <img src="cars/blista2.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">17,000</h4>
+                                <h4><b>Blista</b>
+                                </h4>
+                                <p>A slower car, mainly for drifting. Of course on property where it's allowed.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">94 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_comet2">
+                        <div class="thumbnail">
+                            <img src="cars/comet2.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£200,000</h4>
+                                <h4><b>Comet</b>
+                                </h4>
+                                <p>Same as the Comet, but a little cooler.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">122 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_elegy2">
+                        <div class="thumbnail">
+                            <img src="cars/elegy2.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£300,000</h4>
+                                <h4><b>Elegy RH8</b>
+                                </h4>
+                                <p>A good drifting vehicle.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">74 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" id="buy_schwarzer">
+                        <div class="thumbnail">
+                            <img src="cars/schwarzer.webp" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">£110,000</h4>
+                                <h4><b>Schwartzer</b>
+                                </h4>
+                                <p>The Schwartzer, enough said.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">402 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+									</div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Insert random company</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+		<script>
+		var documentWidth = document.documentElement.clientWidth;
+		var documentHeight = document.documentElement.clientHeight;
+
+		var cursor = document.getElementById("cursor");
+		var cursorX = documentWidth / 2;
+		var cursorY = documentHeight / 2;
+
+		function UpdateCursorPos() {
+		    $(cursor).css('left', cursorX)
+		    $(cursor).css('top', cursorY)
+		}
+
+		function Click(x, y) {
+		    var element = $(document.elementFromPoint(x, y));
+		    element.focus().click();
+		}
+
+		function buyVehicle(veh){
+			$.post('http://es_carshop/buy_vehicle', JSON.stringify({vehicle: veh}));
+		}
+
+		$(function() {
+			$(cursor).css('display', "none")
+			$("body").css('display', "none")
+			$("body").css('background', 'none')
+		    window.addEventListener('message', function(event) {
+		        if (event.data.type == "enableui") {
+		            $(cursor).css('display', event.data.enable ? "block" : "none")
+		            $("body").css('display', event.data.enable ? "block" : "none")
+		            $("body").css('background', event.data.enable ? "white" : "none")
+
+		        } else if (event.data.type == "click") {
+		            // Avoid clicking the cursor itself, click 1px to the top/left;
+		            Click(cursorX - 1, cursorY - 1);
+		        } else if (event.data.type == "vehicles") {
+                    for(var i in event.data.enable) {
+                        $("#buy_" + i).find(".caption").find(".pull-right").html("Owned")
+                    }
+                } else if (event.data.type == "vehicle") {
+                    $("#buy_" + event.data.enable).find(".caption").find(".pull-right").html("Owned")
+                }
+		    });
+
+		    $(document).mousemove(function(event) {
+		        cursorX = event.pageX;
+		        cursorY = event.pageY;
+		        UpdateCursorPos();
+		    });
+
+		    document.onkeyup = function (data) {
+		        if (data.which == 27) { // Escape key
+		            $.post('http://es_carshop/escape', JSON.stringify({}));
+		        }
+		    };
+
+				$("#buy_dominator").click(function(){	buyVehicle('dominator')	})
+				$("#buy_mule").click(function(){ buyVehicle('mule')	})
+				$("#buy_police").click(function(){ buyVehicle('police2')	})
+				$("#buy_ninef").click(function(){ buyVehicle('ninef')	})
+				$("#buy_ninef2").click(function(){ buyVehicle('ninef2')	})
+				$("#buy_prairie").click(function(){ buyVehicle('prairie')	})
+				$("#buy_gauntlet").click(function(){ buyVehicle('gauntlet')	})
+				$("#buy_voodoo2").click(function(){ buyVehicle('voodoo2')	})
+				$("#buy_bfinjection").click(function(){ buyVehicle('bfinjection')	})
+				$("#buy_rancherxl").click(function(){ buyVehicle('rancherxl')	})
+				$("#buy_rebel").click(function(){ buyVehicle('rebel')	})
+				$("#buy_cognoscenti").click(function(){ buyVehicle('cognoscenti')	})
+				$("#buy_emperor").click(function(){ buyVehicle('emperor')	})
+				$("#buy_alpha").click(function(){ buyVehicle('alpha')	})
+				$("#buy_banshee").click(function(){ buyVehicle('banshee')	})
+				$("#buy_blista2").click(function(){ buyVehicle('blista2')	})
+				$("#buy_comet2").click(function(){ buyVehicle('comet2')	})
+				$("#buy_elegy2").click(function(){ buyVehicle('elegy2')	})
+				$("#buy_schwarzer").click(function(){ buyVehicle('schwarzer')	})
+				$("#buy_ztype").click(function(){ buyVehicle('ztype')	})
+				$("#buy_tornado2").click(function(){ buyVehicle('tornado2')	})
+				$("#buy_fmj").click(function(){ buyVehicle('fmj')	})
+				$("#buy_adder").click(function(){ buyVehicle('adder')	})
+				$("#buy_baller3").click(function(){ buyVehicle('baller3')	})
+
+
+				// Tabs
+
+				function hide(){
+					$("#home").css('display', 'none')
+					$("#muscle-cars").css('display', 'none')
+					$("#job-vehicles").css('display', 'none')
+					$("#sports-cars").css('display', 'none')
+					$("#compact-cars").css('display', 'none')
+					$("#offroad-cars").css('display', 'none')
+					$("#sportsclassic-cars").css('display', 'none')
+					$("#super-cars").css('display', 'none')
+					$("#sedan-cars").css('display', 'none')
+					$("#suv-cars").css('display', 'none')
+				}
+				hide()
+
+				function selectCat(cat){
+					hide()
+					if(cat == "job"){
+						$("#job-vehicles").css('display', 'block')
+					}else if(cat == "muscle"){
+						$("#muscle-cars").css('display', 'block')
+					}else if(cat == "home"){
+						$("#home").css('display', 'block')
+					}else if(cat == "sports"){
+						$("#sports-cars").css('display', 'block')
+					}else if(cat == "compact"){
+						$("#compact-cars").css('display', 'block')
+					}else if(cat == "offroad"){
+						$("#offroad-cars").css('display', 'block')
+					}else if(cat == "sedans"){
+						$("#sedan-cars").css('display', 'block')
+					}else if(cat == "sportsclassic"){
+						$("#sportsclassic-cars").css('display', 'block')
+					}else if(cat == "super"){
+						$("#super-cars").css('display', 'block')
+					}else if(cat == "suv"){
+						$("#suv-cars").css('display', 'block')
+					}
+				}
+				selectCat("home")
+
+				$('#select-cat-job').click(function(){ selectCat("job") })
+				$('#select-cat-muscle').click(function(){ selectCat("muscle") })
+				$('#select-cat-home').click(function(){ selectCat("home") })
+				$('#select-cat-sports').click(function(){ selectCat("sports") })
+				$('#select-cat-compact').click(function(){ selectCat("compact") })
+				$('#select-cat-offroad').click(function(){ selectCat("offroad") })
+				$('#select-cat-sedan').click(function(){ selectCat("sedans") })
+				$('#select-cat-sportsclassic').click(function(){ selectCat("sportsclassic") })
+				$('#select-cat-super').click(function(){ selectCat("super") })
+				$('#select-cat-suv').click(function(){ selectCat("suv") })
+		});
+		</script>
+
+</body>
+
+</html>
